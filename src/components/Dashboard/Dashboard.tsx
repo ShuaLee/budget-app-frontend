@@ -7,10 +7,13 @@ const Dashboard: React.FC = () => {
     <Grid
       templateAreas={{
         base: `"header" 
-             "main"`,
+               "main"
+               "footer"`,
         lg: `"nav header" 
-           "nav main"`,
+             "nav main"
+             "nav footer"`,
       }}
+      gridTemplateRows={"50px 1fr 30px"}
       templateColumns={{
         base: "1fr",
         lg: "250px 1fr",
@@ -33,6 +36,9 @@ const Dashboard: React.FC = () => {
       </Show>
       <GridItem area="main" bg="green.500">
         main
+      </GridItem>
+      <GridItem area="footer" bg="orange.500">
+        footer
       </GridItem>
     </Grid>
   );
