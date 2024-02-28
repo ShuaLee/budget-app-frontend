@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Navbar from "./Navbar";
+import Header from "./Header";
 
 const Dashboard: React.FC = () => {
   return (
@@ -13,15 +14,15 @@ const Dashboard: React.FC = () => {
              "nav main"
              "nav footer"`,
       }}
-      gridTemplateRows={"50px 1fr 30px"}
+      gridTemplateRows={"75px 1fr 30px"}
       templateColumns={{
         base: "1fr",
         lg: "250px 1fr",
       }}
       bg="pink.300"
     >
-      <GridItem area="header" bg="red.500">
-        header
+      <GridItem area="header">
+        <Header />
       </GridItem>
       <Show above="lg">
         <GridItem

@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <Box p={4}>
       <VStack>
-        <Text fontSize="lg" fontWeight="bold" alignSelf="center">
+        <Text fontSize="2xl" fontWeight="bold" alignSelf="center">
           Budget-App
         </Text>
         <Text>Dashboard</Text>
@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
         <Text>Transactions</Text>
         <Text>Investments</Text>
         <Text>Assets</Text>
+        <Text>Account Settings</Text>
       </VStack>
     </Box>
   );
