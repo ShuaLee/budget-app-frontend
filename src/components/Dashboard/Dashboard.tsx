@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Navbar from "../Navbar/Navbar";
+import Graph from "../Graph/Graph";
 
 const Dashboard: React.FC = () => {
   return (
@@ -16,8 +17,8 @@ const Dashboard: React.FC = () => {
         <Navbar />
       </GridItem>
 
-      <GridItem area="main" bg="pink.300">
-        main
+      <GridItem area="main">
+        <Graph />
       </GridItem>
       <GridItem area="footer" bg="orange.500">
         footer
