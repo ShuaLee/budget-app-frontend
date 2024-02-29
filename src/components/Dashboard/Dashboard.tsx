@@ -1,41 +1,22 @@
 import React from "react";
-import { Grid, GridItem, Show } from "@chakra-ui/react";
-import Navbar from "./Navbar";
-import Header from "./Header";
+import { Grid, GridItem } from "@chakra-ui/react";
+import Navbar from "../Navbar/Navbar";
 
 const Dashboard: React.FC = () => {
   return (
     <Grid
       templateAreas={{
-        base: `"header" 
+        base: `"nav" 
                "main"
                "footer"`,
-        lg: `"nav header" 
-             "nav main"
-             "nav footer"`,
       }}
       gridTemplateRows={"75px 1fr 30px"}
-      templateColumns={{
-        base: "1fr",
-        lg: "250px 1fr",
-      }}
-      bg="pink.300"
     >
-      <GridItem area="header">
-        <Header />
+      <GridItem area="nav">
+        <Navbar />
       </GridItem>
-      <Show above="lg">
-        <GridItem
-          area="nav"
-          bg="blue.500"
-          borderRadius="3xl"
-          h="calc(100vh - 1rem)"
-          m={2}
-        >
-          <Navbar />
-        </GridItem>
-      </Show>
-      <GridItem area="main" bg="green.500" borderRadius="3xl" mr={2}>
+
+      <GridItem area="main" bg="pink.300">
         main
       </GridItem>
       <GridItem area="footer" bg="orange.500">
