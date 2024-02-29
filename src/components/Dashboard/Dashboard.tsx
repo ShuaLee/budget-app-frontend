@@ -30,12 +30,12 @@ const Dashboard: React.FC = () => {
           bg="blue.500"
           borderRadius="3xl"
           h="calc(100vh - 1rem)"
-          m="2"
+          m={2}
         >
           <Navbar />
         </GridItem>
       </Show>
-      <GridItem area="main" bg="green.500">
+      <GridItem area="main" bg="green.500" borderRadius="3xl" mr={2}>
         main
       </GridItem>
       <GridItem area="footer" bg="orange.500">
