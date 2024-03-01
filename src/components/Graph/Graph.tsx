@@ -45,7 +45,29 @@ const data: ChartData<"line"> = {
     {
       data: [65, 59, 80, 81, 56, 55, 40, 80, 20, 68, 71, 97],
       fill: true,
-      backgroundColor: "rgba(75, 192, 192, 0.2)",
+      // "rgba(75, 192, 192, 0.2)"
+      backgroundColor: (context) => {
+        const bgColor = [
+          "rgba(75, 192, 192, 0.45)",
+          "rgba(75, 192, 192, 0.25)",
+          "rgba(75, 192, 192, 0.05)",
+          "rgba(255, 255, 255, 0.0)",
+        ];
+        if (!context.chart.chartArea) {
+          return;
+        }
+        const {
+          ctx,
+          chartArea: { top, bottom },
+        } = context.chart;
+        const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
+        gradientBg.addColorStop(0.7, bgColor[0]);
+        gradientBg.addColorStop(0.85, bgColor[1]);
+        gradientBg.addColorStop(0.95, bgColor[2]);
+        gradientBg.addColorStop(1, bgColor[3]);
+        return gradientBg;
+      },
+      // backgroundColor: "rgba(75, 192, 192, 0.2)",
       borderColor: "rgb(75, 192, 192)",
       tension: 0.4,
       pointRadius: 0,
@@ -69,6 +91,12 @@ const options: ChartOptions<"line"> = {
   interaction: {
     mode: "index",
     intersect: false,
+  },
+  elements: {
+    point: {
+      radius: 0, // Ensures points are not drawn
+      hoverRadius: 0, // Ensures points do not appear on hover
+    },
   },
   scales: {
     x: {

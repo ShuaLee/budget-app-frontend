@@ -19,9 +19,7 @@ const Dashboard: React.FC = () => {
       <GridItem area="main">
         <Graph />
       </GridItem>
-      <GridItem area="footer" bg="orange.500">
-        footer
-      </GridItem>
+      <GridItem area="footer">footer</GridItem>
     </Grid>
   );
 };
