@@ -16,7 +16,6 @@ const Dashboard: React.FC = () => {
       <GridItem area="nav">
         <Navbar />
       </GridItem>
-
       <GridItem area="main">
         <Graph />
       </GridItem>
