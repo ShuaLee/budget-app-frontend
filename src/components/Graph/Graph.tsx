@@ -14,6 +14,7 @@ import {
 } from "chart.js";
 import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import PeriodSelector from "./PeriodSelector";
 
 ChartJS.register(
   CategoryScale,
@@ -139,9 +140,12 @@ const Graph: React.FC = () => {
   }, []);
 
   return (
-    <Box height={{ base: "600px", md: "600px", lg: "600px" }} width="100%">
-      <Line data={data} options={options} key={windowSize.width} />
-    </Box>
+    <>
+      <Box height={{ base: "600px", md: "600px", lg: "600px" }} width="100%">
+        <Line data={data} options={options} key={windowSize.width} />
+        <PeriodSelector />
+      </Box>
+    </>
   );
 };
 
