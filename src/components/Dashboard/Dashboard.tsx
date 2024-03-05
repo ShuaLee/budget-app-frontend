@@ -13,8 +13,6 @@ const Dashboard: React.FC = () => {
                "footer"`,
       }}
       gridTemplateRows={"75px 1fr 30px"}
-      bg="gray.100"
-      height="100vh"
     >
       <GridItem area="nav">
         <Navbar />
