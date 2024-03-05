@@ -1,6 +1,15 @@
-import { Box, HStack, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Hide,
+  IconButton,
+  Show,
+  Spacer,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import NavbarText from "./NavbarText";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const Navbar: React.FC = () => {
   return (
@@ -9,12 +18,24 @@ const Navbar: React.FC = () => {
         <Text fontSize="2xl" fontWeight="bold">
           Budget-App
         </Text>
-        <NavbarText>Overview</NavbarText>
-        <NavbarText>Income & Expenses</NavbarText>
-        <NavbarText>Transactions</NavbarText>
-        <NavbarText>Subscriptions</NavbarText>
-        <NavbarText>Investments</NavbarText>
-        <NavbarText>Assets</NavbarText>
+        {/* Show on larger screens */}
+        <Hide below="md">
+          <NavbarText>Overview</NavbarText>
+          <NavbarText>Income & Expenses</NavbarText>
+          <NavbarText>Assets</NavbarText>
+          <NavbarText>Subscriptions</NavbarText>
+        </Hide>
+        {/* Show on smaller screens */}
+        <Show below="md">
+          <IconButton
+            aria-label="Open menu"
+            icon={<HamburgerIcon />}
+            variant="ghost"
+            _hover={{ bg: "transparent" }} // Optional: Ensure background stays transparent on hover
+            _active={{ bg: "transparent" }} // Optional: Ensure background stays transparent when clicked
+            // onClick={() => {}}
+          />
+        </Show>
         <Spacer />
         <NavbarText>Profile</NavbarText>
       </HStack>
