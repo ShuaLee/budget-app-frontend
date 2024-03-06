@@ -8,16 +8,20 @@ const QuickTileStack: React.FC = () => {
   return (
     <VStack spacing={50}>
       <QuickTileContainer>
+        <QuickTileContainerText>Total Assets</QuickTileContainerText>
+        <QuickTile>Total Assets</QuickTile>
+      </QuickTileContainer>
+      <QuickTileContainer>
         <QuickTileContainerText>Total Income</QuickTileContainerText>
-        <QuickTile>Total Income</QuickTile>
+        <QuickTile>Net Income</QuickTile>
       </QuickTileContainer>
       <QuickTileContainer>
         <QuickTileContainerText>Total Expenses</QuickTileContainerText>
         <QuickTile>Total Expenses</QuickTile>
       </QuickTileContainer>
       <QuickTileContainer>
-        <QuickTileContainerText>Total Assets</QuickTileContainerText>
-        <QuickTile>Total Assets</QuickTile>
+        <QuickTileContainerText>Net Cashflow</QuickTileContainerText>
+        <QuickTile>Net Cashflow</QuickTile>
       </QuickTileContainer>
     </VStack>
   );
