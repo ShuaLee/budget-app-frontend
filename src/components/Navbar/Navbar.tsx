@@ -10,6 +10,7 @@ import {
 import React from "react";
 import NavbarText from "./NavbarText";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import NavbarButton from "./NavbarButton";
 
 const Navbar: React.FC = () => {
   return (
@@ -27,10 +28,10 @@ const Navbar: React.FC = () => {
         </Text>
         {/* Show on larger screens */}
         <Hide below="md">
-          <NavbarText>Overview</NavbarText>
-          <NavbarText>Income & Expenses</NavbarText>
-          <NavbarText>Assets</NavbarText>
-          <NavbarText>Subscriptions</NavbarText>
+          <NavbarButton>Overview</NavbarButton>
+          <NavbarButton>Income & Expenses</NavbarButton>
+          <NavbarButton>Assets</NavbarButton>
+          <NavbarButton>Subscriptions</NavbarButton>
         </Hide>
         {/* Show on smaller screens */}
         <Show below="md">
