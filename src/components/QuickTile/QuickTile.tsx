@@ -1,6 +1,11 @@
-import { Box } from "@chakra-ui/react";
+import React, { ReactNode } from "react";
+import { Box, Text } from "@chakra-ui/react";
 
-const QuickTile = () => {
+interface QuickTileProps {
+  children: ReactNode;
+}
+
+const QuickTile: React.FC<QuickTileProps> = ({ children }) => {
   return (
     <Box
       bg="white"
@@ -12,9 +17,8 @@ const QuickTile = () => {
       p={4} // Padding inside the box
       my={0} // Margin for spacing above and below the component
       mx="auto"
-      width="800px"
     >
-      hello
+      <Text>{children}</Text>
     </Box>
   );
 };

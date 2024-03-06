@@ -8,7 +8,7 @@ const PeriodSelector = () => {
   const [selectedPeriod, setSelectedPeriod] = useState("1W");
 
   return (
-    <HStack justifyContent="center" width="full">
+    <HStack justifyContent="center" width="full" paddingBottom={20}>
       {periods.map((period) => (
         <PeriodTile
           key={period}

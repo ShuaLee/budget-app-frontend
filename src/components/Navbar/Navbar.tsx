@@ -13,7 +13,14 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 
 const Navbar: React.FC = () => {
   return (
-    <Box height="100%" px={5} bg="gray.50" boxShadow="md">
+    <Box
+      height="100%"
+      px={5}
+      bg="gray.50"
+      boxShadow="md"
+      borderWidth="1px"
+      borderColor="gray.300"
+    >
       <HStack height="100%" width="100%" align="center" spacing={7}>
         <Text fontSize="2xl" fontWeight="bold">
           Budget-App
