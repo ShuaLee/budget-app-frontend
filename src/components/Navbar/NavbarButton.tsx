@@ -10,8 +10,9 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({ children }) => {
   return (
     <Button
       variant="ghost"
-      _hover={{ bg: "gray.100" }} // Adjust hover background color as needed
+      _hover={{ bg: "gray.50" }} // Adjust hover background color as needed
       onClick={() => {}}
+      height="100%"
     >
       <NavbarText>{children}</NavbarText>
     </Button>
