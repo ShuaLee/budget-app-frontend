@@ -8,7 +8,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import NavbarText from "./NavbarText";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NavbarButton from "./NavbarButton";
 
@@ -22,8 +21,8 @@ const Navbar: React.FC = () => {
       borderWidth="1px"
       borderColor="gray.300"
     >
-      <HStack height="100%" width="100%" align="center" spacing={7}>
-        <Text fontSize="2xl" fontWeight="bold">
+      <HStack height="100%" width="100%" align="center" spacing={0}>
+        <Text fontSize="2xl" fontWeight="bold" paddingEnd={3}>
           Budget-App
         </Text>
         {/* Show on larger screens */}
@@ -45,7 +44,7 @@ const Navbar: React.FC = () => {
           />
         </Show>
         <Spacer />
-        <NavbarText>Profile</NavbarText>
+        <NavbarButton>Profile</NavbarButton>
       </HStack>
     </Box>
   );
