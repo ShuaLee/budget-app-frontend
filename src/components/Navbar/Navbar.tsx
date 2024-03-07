@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   HStack,
   Hide,
@@ -44,7 +45,14 @@ const Navbar: React.FC = () => {
           />
         </Show>
         <Spacer />
-        <NavbarButton>Profile</NavbarButton>
+        <HStack>
+          <Avatar
+            size="md"
+            name="Josh Grein"
+            src="#"
+            bg="rgba(75, 192, 192, 0.8)"
+          ></Avatar>
+        </HStack>
       </HStack>
     </Box>
   );
