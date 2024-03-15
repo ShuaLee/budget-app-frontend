@@ -20,7 +20,7 @@ const QuickTile: React.FC<QuickTileProps> = ({ children, amount }) => {
       my={0} // Margin for spacing above and below the component
       mx="auto"
       position="relative"
-      width={["100%", "md", "lg", "700px"]}
+      width={["90%", "md", "lg", "700px"]}
       maxW="100%"
     >
       <Flex
