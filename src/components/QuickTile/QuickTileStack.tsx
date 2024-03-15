@@ -6,17 +6,17 @@ import QuickTileContainerText from "./QuickTileContainerText";
 const QuickTileStack: React.FC = () => {
   return (
     <VStack spacing={10}>
-      <QuickTile>
+      <QuickTile amount="$1,000,000">
         <QuickTileContainerText>Total Assets</QuickTileContainerText>
       </QuickTile>
-      <QuickTile>
+      <QuickTile amount="$65,000">
         <QuickTileContainerText>Total Income</QuickTileContainerText>
       </QuickTile>
-      <QuickTile>
+      <QuickTile amount="$2,000">
         <QuickTileContainerText>Total Expenses</QuickTileContainerText>
       </QuickTile>
-      <QuickTile>
-        <QuickTileContainerText>Net Cashflow</QuickTileContainerText>
+      <QuickTile amount="$10,000">
+        <QuickTileContainerText>Investment Cashflow</QuickTileContainerText>
       </QuickTile>
     </VStack>
   );
