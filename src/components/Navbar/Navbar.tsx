@@ -28,10 +28,10 @@ const Navbar: React.FC = () => {
         </Text>
         {/* Show on larger screens */}
         <Hide below="md">
-          <NavbarButton>Overview</NavbarButton>
-          <NavbarButton>Income & Expenses</NavbarButton>
-          <NavbarButton>Assets</NavbarButton>
-          <NavbarButton>Subscriptions</NavbarButton>
+          <NavbarButton to="/">Overview</NavbarButton>
+          <NavbarButton to="/assets">Assets</NavbarButton>
+          <NavbarButton to="/income-expenses">Income & Expenses</NavbarButton>
+          <NavbarButton to="/subscriptions">Subscriptions</NavbarButton>
         </Hide>
         {/* Show on smaller screens */}
         <Show below="md">
