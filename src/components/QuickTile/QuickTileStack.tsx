@@ -18,6 +18,9 @@ const QuickTileStack: React.FC = () => {
       <QuickTile amount="$10,000">
         <QuickTileContainerText>Investment Cashflow</QuickTileContainerText>
       </QuickTile>
+      <QuickTile amount="$200">
+        <QuickTileContainerText>Subscriptions</QuickTileContainerText>
+      </QuickTile>
     </VStack>
   );
 };
